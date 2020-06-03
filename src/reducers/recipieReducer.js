@@ -2,6 +2,8 @@ const initialState = {
   fetching: false,
   fetched: false,
   recipie: {},
+  search: '',
+  resultNum: 0,
   error: null,
 }
 
@@ -18,6 +20,9 @@ export default function reducer(state=initialState, action) {
     }
     case "GET_RECIPIE_ERROR": {
       return {...state, fetching:false, error:action.payload}
+    }
+    case "SEARCH_RECIPE": {
+      return {...state, search: action.payload}
     }
     default: {
       return state

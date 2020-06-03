@@ -1,6 +1,7 @@
 import React from 'react';
 import Recipie from './components/Recipie';
 import Search from './components/Search';
+import Next from './components/Next';
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Search />
       <Recipie />
+      <Next />
     </div>
   );
 }
