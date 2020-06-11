@@ -1,4 +1,4 @@
-const base_url = "http://192.168.68.56:8000/";
+const base_url = "http://localhost:8000/";
 
 export function fetchRecipie(food, num) {
   return function (dispatch) {
