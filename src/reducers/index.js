@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
 
-import recipie from './recipieReducer'
+import recipe from './recipeReducer'
 
-export default combineReducers({recipie});
+export default combineReducers({recipe});

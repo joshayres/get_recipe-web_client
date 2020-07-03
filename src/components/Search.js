@@ -1,12 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { fetchRecipie, search } from "../actions/recipieActions";
+import { fetchRecipe, search } from "../actions/recipeActions";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
+import { SearchWrap } from './SearchStyles'
+
 const mapDispatchToProps = {
-  fetchRecipie,
+  fetchRecipe,
   search,
 };
 
@@ -24,11 +26,11 @@ class Search extends React.Component {
   handleClick(e) {
     e.preventDefault();
     this.props.search(this.state.search);
-    this.props.fetchRecipie(this.state.search, 0);
+    this.props.fetchRecipe(this.state.search, 0);
   }
   render() {
     return (
-      <div className="search">
+      <SearchWrap>
         <form onSubmit={this.handleClick.bind(this)}>
           <input
             className="search-bar"
@@ -43,7 +45,7 @@ class Search extends React.Component {
             <FontAwesomeIcon icon={faSearch}/>
           </button>
         </form>
-      </div>
+      </SearchWrap>
     );
   }
 }

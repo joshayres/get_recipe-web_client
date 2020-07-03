@@ -1,7 +1,7 @@
 const initialState = {
   fetching: false,
   fetched: false,
-  recipie: {},
+  recipe: {},
   search: '',
   resultNum: 0,
   error: null,
@@ -9,16 +9,16 @@ const initialState = {
 
 export default function reducer(state=initialState, action) {
   switch (action.type){
-    case "GET_RECIPIE_START": {
+    case "GET_RECIPE_START": {
       return {
         ...state,
         fetching: true
       }
     }
-    case "GET_RECIPIE": {
-      return {...state, fetching:false, fetched:true, recipie:action.payload}
+    case "GET_RECIPE": {
+      return {...state, fetching:false, fetched:true, recipe:action.payload}
     }
-    case "GET_RECIPIE_ERROR": {
+    case "GET_RECIPE_ERROR": {
       return {...state, fetching:false, error:action.payload}
     }
     case "SEARCH_RECIPE": {

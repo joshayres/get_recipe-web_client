@@ -1,15 +1,15 @@
 const base_url = "http://localhost:8000/";
 
-export function fetchRecipie(food, num) {
+export function fetchRecipe(food, num) {
   return function (dispatch) {
-    dispatch({ type: "GET_RECIPIE_START" });
+    dispatch({ type: "GET_RECIPE_START" });
     fetch(base_url + food + "/" + num)
       .then((response) => response.json())
       .then((data) => {
-        dispatch({ type: "GET_RECIPIE", payload: data });
+        dispatch({ type: "GET_RECIPE", payload: data });
       })
       .catch((err) => {
-        dispatch({ type: "GET_RECIPIE_ERROR", payload: err });
+        dispatch({ type: "GET_RECIPE_ERROR", payload: err });
       });
   };
 }
