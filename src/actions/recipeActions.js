@@ -1,4 +1,4 @@
-const base_url = "http://localhost:8000/";
+const base_url = "http://localhost:8000/api/";
 
 export function fetchRecipe(food, num) {
   return function (dispatch) {
