@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const AppWrap = styled.div`
   min-height: 100vh;
-  background: #fbeee3;
+  background: #fbbb9f;
 
   font-family: "Montserrat";
   color: #000000;
